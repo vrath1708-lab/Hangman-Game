@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🎭 Hangman Game</h1>
+
+    <!-- Login Section -->
+    <h2>🔑 Login</h2>
+    <input type="text" id="login-username" placeholder="Username">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="login-message"></p>
+
+    <!-- Registration Section -->
+    <h2>✍ Register</h2>
+    <input type="text" id="register-username" placeholder="Username">
+    <input type="password" id="register-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <p id="register-message"></p>
+
+    <button onclick="logout()">🚪 Logout</button>
+
+    <!-- Stickman Animation -->
+    <div id="stickman-container">
+        <canvas id="stickmanCanvas" width="200" height="250"></canvas>
+    </div>
+
+    <!-- Game Section -->
+    <p id="word-display">_ _ _ _ _</p>
+    <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
+    <button onclick="submitGuess()">🎯 Guess</button>
+    <button onclick="showHint()">💡 Hint</button>
+    <button onclick="restartGame()">🔄 Restart</button>
+    <p id="hint-message"></p>
+    <p id="message"></p>
+    <p>❤️ Remaining Lives: <span id="lives">6</span></p>
+    <p>🔤 Guessed Letters: <span id="guessed-letters">None</span></p>
+
+    <!-- Leaderboard -->
+    <h2>🏆 Leaderboard</h2>
+    <ul id="leaderboard"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
